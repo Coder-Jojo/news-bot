@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Encryption</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='styles.css')}}"
+    />
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+    <!-- Favicon -->
+    <link href="static/img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">   
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="static/css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" />
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom" style="margin-top:10px;">
+        <h1 class="navbar-brand mr-sm-8 mt-1" href="#" style="color:#fff;">News Room</h1>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto ml-auto">
+                <li class="nav-item">
+                    <div class="justify-content-md-center">
+                        <form class="form-inline my-2 my-lg-0 my-lg-0">
+                            <input class="form-control mr-sm-2" type="text" placeholder="Search now..." aria-label="Search" style="width: 600px;">
+                            <!-- <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button> -->
+                            <a href="#" class ="search-btn">
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                              Search
+                            </a>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid py-3">
+        <div class="container">
+            <div class="row">
+              <div class="col-lg-8">
+                  <div class="row owl-carousel owl-carousel-2 owl-loaded owl-drag carousel-item-2 position-relative mb-lg-0">
+                      <div class="col-lg-12" style="border-radius: 10px;">
+                          <div class="position-relative mb-3" style="border-radius: 10px;">
+                              <img class="img-fluid w-100" src="static/img/news-500x280-2.jpg" style="object-fit: cover;">
+                              <div class="overlay position-relative bg-light">
+                                  <div class="mb-2" style="font-size: 14px;">
+                                      <a href="">Technology</a>
+                                      <span class="px-1">/</span>
+                                      <span>January 01, 2045</span>
+                                  </div>
+                                  <a class="h4" href="">Est stet amet ipsum stet clita rebum duo</a>
+                                  <p class="m-0">Rebum dolore duo et vero ipsum clita, est ea sed duo diam ipsum, clita at justo, Rebum dolore duo et vero ipsum clita, est ea sed duo diam ipsum,Rebum dolore duo et vero ipsum clita, Rebum dolore duo et vero ipsum clita, lorem amet vero eos sed sit...</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-lg-12">
+                          <div class="position-relative mb-3">
+                              <img class="img-fluid w-100" src="static/img/news-500x280-3.jpg" style="object-fit: cover;">
+                              <div class="overlay position-relative bg-light">
+                                  <div class="mb-2" style="font-size: 14px;">
+                                      <a href="">Technology</a>
+                                      <span class="px-1">/</span>
+                                      <span>January 01, 2045</span>
+                                  </div>
+                                  <a class="h4" href="">Est stet amet ipsum stet clita rebum duo</a>
+                                  <p class="m-0">Rebum dolore duo et vero ipsum clita, est ea sed duo diam ipsum, Rebum dolore duo et vero ipsum clita, est ea sed duo diam ipsum, Rebum dolore duo et vero ipsum clita, Rebum dolore duo et vero ipsum clita, clita at justo, lorem amet vero eos sed sit...</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="pb-3">
+                  <div class="text-white py-2 mb-3">
+                      <h4 class="m-0">Trending</h4>
+                  </div>
+                  <div class="d-flex mb-3">
+                      <img src="static/img/news-100x100-1.jpg" style="width: 100px; height: 100px; object-fit: cover;">
+                      <div class="w-100 d-flex flex-column justify-content-center bg-light px-3" style="height: 100px;">
+                          <div class="mb-1" style="font-size: 13px;">
+                              <a href="">Technology</a>
+                              <span class="px-1">/</span>
+                              <span>January 01, 2045</span>
+                          </div>
+                          <a class="h6 m-0" href="">Lorem ipsum dolor sit amet consec adipis elit</a>
+                      </div>
+                  </div>
+                  <div class="d-flex mb-3">
+                      <img src="static/img/news-100x100-2.jpg" style="width: 100px; height: 100px; object-fit: cover;">
+                      <div class="w-100 d-flex flex-column justify-content-center bg-light px-3" style="height: 100px;">
+                          <div class="mb-1" style="font-size: 13px;">
+                              <a href="">Technology</a>
+                              <span class="px-1">/</span>
+                              <span>January 01, 2045</span>
+                          </div>
+                          <a class="h6 m-0" href="">Lorem ipsum dolor sit amet consec adipis elit</a>
+                      </div>
+                  </div>
+                </div>
+                <div class="pb-3">
+                  <div class="text-white py-2 mb-3">
+                      <h4 class="m-0">Tags</h4>
+                  </div>
+                  <div class="d-flex flex-wrap m-n1">
+                      <a href="" class="btn btn-sm btn-outline-secondary m-1">Politics</a>
+                      <a href="" class="btn btn-sm btn-outline-secondary m-1">Business</a>
+                      <a href="" class="btn btn-sm btn-outline-secondary m-1">Corporate</a>
+                      <a href="" class="btn btn-sm btn-outline-secondary m-1">Sports</a>
+                      <a href="" class="btn btn-sm btn-outline-secondary m-1">Health</a>
+                      <a href="" class="btn btn-sm btn-outline-secondary m-1">Education</a>
+                      <a href="" class="btn btn-sm btn-outline-secondary m-1">Science</a>
+                      <a href="" class="btn btn-sm btn-outline-secondary m-1">Technology</a>
+                      <a href="" class="btn btn-sm btn-outline-secondary m-1">Foods</a>
+                      <a href="" class="btn btn-sm btn-outline-secondary m-1">Entertainment</a>
+                      <a href="" class="btn btn-sm btn-outline-secondary m-1">Travel</a>
+                      <a href="" class="btn btn-sm btn-outline-secondary m-1">Lifestyle</a>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="static/lib/easing/easing.min.js"></script>
+    <script src="static/lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="static/mail/jqBootstrapValidation.min.js"></script>
+    <script src="static/mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="static/js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="/static/utility.js"></script>
+</html>
