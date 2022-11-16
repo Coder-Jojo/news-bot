@@ -33,27 +33,33 @@
   <body>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" />
     <nav class="navbar navbar-expand-lg navbar-light navbar-custom" style="margin-top:10px;">
-        <h1 class="navbar-brand mr-sm-8 mt-1" href="#" style="color:#fff;">News Room</h1>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto ml-auto">
-                <li class="nav-item">
-                    <div class="justify-content-md-center">
-                        <form class="form-inline my-2 my-lg-0 my-lg-0">
-                            <input class="form-control mr-sm-2" type="text" placeholder="Search now..." aria-label="Search" style="width: 600px;">
-                            <!-- <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button> -->
-                            <a href="#" class ="search-btn">
-                              <span></span>
-                              <span></span>
-                              <span></span>
-                              <span></span>
-                              Search
-                            </a>
-                        </form>
-                    </div>
-                </li>
-            </ul>
-        </div>
+        <h1 class="navbar-brand mr-sm-8 mt-1 text-white" href="#">News Room</h1>
+        <ul class="navbar-nav mr-auto ml-auto">
+            <li class="nav-item">
+                <div class="justify-content-md-center">
+                    <form class="form-inline my-2 my-lg-0 my-lg-0">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search now..." aria-label="Search" style="width: 600px;" name="Search" id="Search" required />
+                        <!-- <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button> -->
+                        <a href="#" class ="search-btn" onclick="submitData('/submitJSON')">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Search
+                        </a>
+                    </form>
+                </div>
+            </li>
+        </ul>
     </nav>
+    
+    <div class="container-fluid py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-white" style="float:left;" id="output_div"></div>
+            </div>
+        </div>
+    </div>
     <div class="container-fluid py-3">
         <div class="container">
             <div class="row">
