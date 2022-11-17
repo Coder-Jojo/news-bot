@@ -4,10 +4,12 @@ function submitData() {
 
 	var json = JSON.stringify(obj);
 	var xhr = new XMLHttpRequest();
+	$("#output_div").empty();
 
 	xhr.open("POST", "/submitJSON", true);
 	xhr.setRequestHeader("Content-type", "application/json; charset=utf-8");
 	xhr.onload = function () {
+	    $("#output_div").empty();
 		$("#output_div").append(xhr.response);
 //		$("#car3").append("<img class=\"img-fluid w-100\" src=\"static/img/news-500x280-3.jpg\" style=\"object-fit: cover;\">")
 		// // $('#output_div').val(xhr.response)
@@ -39,7 +41,8 @@ function loadText() {
 		$("#car_test5").append(obj[5]);
 		$("#car_test6").append(obj[6]);
 		$("#car_test7").append(obj[7]);
-//		$("#output_div").append("test");
+//		$("#output_div").append(obj[0]);
+//		console.log(obj[0])
 
 		window.scrollBy(0, 700);
 

@@ -1,6 +1,6 @@
 import datetime
 
-from googlesearch import search
+from googlesearch import search as gsearch
 import newspaper
 from pprint import pprint
 import re
@@ -22,7 +22,7 @@ def cleaned_text(text):
 
 def get_links(query, total_links):
     links = list()
-    for link in search(query, num_results=total_links):
+    for link in gsearch(query):
         links.append(link)
     return links
 
@@ -44,6 +44,34 @@ def fetch_news(url):
     }
 
     return article
+
+
+def fetch_article(query):
+    links = get_links(query, 10)
+    news = ""
+    image = None
+    for link in links[:10]:
+        try:
+            current_text = fetch_news(link)
+            if image is None and current_text["top_image"] != "":
+                image = current_text["top_image"]
+            news += ". " + current_text["text"]
+            if len(news) >= int(1e4):
+                break
+        except Exception as e:
+            pass
+
+    ### find summary of news here
+    news = news[:200]
+    ###
+
+    if image is None:
+        image = ""
+
+    news = create_search_news(image, news)
+    print(news)
+    print("mast")
+    return news
 
 
 def create_post(imgsrc, date, title, text, topic):
@@ -86,10 +114,24 @@ def create_carousel(data):
     carousel = []
     for post in data:
         carousel.append(create_post(post["imgsrc"], post["date"], post["title"], post["text"], post["topic"]))
-    for p in carousel:
-        print(p)
+        # carousel.append(create_search_news(post["imgsrc"], post["date"], post["title"], post["text"], post["topic"]))
+
     return carousel
     # return
+
+
+def create_search_news(imgsrc, text):
+    news = f"""
+        <div class="row">
+          <div style="float:left; width:30%;">
+            <img class="img-fluid w-100" src={imgsrc} style="object-fit: cover;">
+          </div>
+          <div style="float:left; width:60%; text-align:center; display: flex; justify-content: center; align-items: center;">
+            {text}
+            </div>
+        </div>
+    """
+    return news
 
 
 def get_current_news():
