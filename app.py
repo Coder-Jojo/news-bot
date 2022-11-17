@@ -20,6 +20,14 @@ def processJSON():
     # response +="Text you searched is <b>"+str(temp1)+"</b><br> <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br> Sit amet nisl purus in mollis nunc sed. In vitae turpis massa sed elementum tempus egestas sed sed. Interdum varius sit amet mattis vulputate enim nulla. Porttitor rhoncus dolor purus non enim. Nullam non nisi est sit.<br> Massa vitae tortor condimentum lacinia quis vel eros donec ac. At quis risus sed vulputate. Porttitor rhoncus dolor purus non enim praesent elementum. Ac odio tempor orci dapibus ultrices in iaculis. Nullam vehicula ipsum a arcu. Consectetur adipiscing elit ut aliquam purus.<br> "
     return response
 
+@app.route("/submitQ", methods=["POST"])
+def processQ():
+    obj = request.get_json()
+    val = obj['search_val']
+    print(val)
+    response = "returning sample ans"
+    return response
+
 @app.route("/loadNews", methods=["POST"])
 def loadNews():
     jsonObj = request.get_json()

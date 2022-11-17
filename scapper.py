@@ -6,6 +6,7 @@ from pprint import pprint
 import re
 from feedsearch import search
 import feedparser
+from summarizer import get_summary
 import time
 
 
@@ -22,7 +23,9 @@ def cleaned_text(text):
 
 def get_links(query, total_links):
     links = list()
-    for link in gsearch(query):
+    glinks = gsearch(query)
+    print('links')
+    for link in glinks:
         links.append(link)
     return links
 
@@ -56,13 +59,14 @@ def fetch_article(query):
             if image is None and current_text["top_image"] != "":
                 image = current_text["top_image"]
             news += ". " + current_text["text"]
-            if len(news) >= int(1e4):
+            if len(news) >= int(2e3):
                 break
         except Exception as e:
             pass
 
     ### find summary of news here
-    news = news[:200]
+    news = get_summary(news)
+    print("got summary")
     ###
 
     if image is None:

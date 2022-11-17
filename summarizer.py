@@ -47,4 +47,5 @@ That number is likely to jump quickly after the federal government on Tuesday ga
 
 
 def get_summary(text):
+    print('starting summarizing')
     return summarizer1(text, max_length=100, min_length=5, do_sample=False)[0]['summary_text']
