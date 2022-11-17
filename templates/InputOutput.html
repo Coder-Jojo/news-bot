@@ -30,7 +30,7 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="static/css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body onload="loadText()">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" />
     <nav class="navbar navbar-expand-lg navbar-light navbar-custom" style="margin-top:10px;">
         <h1 class="navbar-brand mr-sm-8 mt-1 text-white" href="#">News Room</h1>
@@ -64,35 +64,71 @@
         <div class="container">
             <div class="row">
               <div class="col-lg-8">
-                  <div class="row owl-carousel owl-carousel-2 owl-loaded owl-drag carousel-item-2 position-relative mb-lg-0">
-                      <div class="col-lg-12" style="border-radius: 10px;">
-                          <div class="position-relative mb-3" style="border-radius: 10px;">
-                              <img class="img-fluid w-100" src="static/img/news-500x280-2.jpg" style="object-fit: cover;">
-                              <div class="overlay position-relative bg-light">
-                                  <div class="mb-2" style="font-size: 14px;">
-                                      <a href="">Technology</a>
-                                      <span class="px-1">/</span>
-                                      <span>January 01, 2045</span>
-                                  </div>
-                                  <a class="h4" href="">Est stet amet ipsum stet clita rebum duo</a>
-                                  <p class="m-0">Rebum dolore duo et vero ipsum clita, est ea sed duo diam ipsum, clita at justo, Rebum dolore duo et vero ipsum clita, est ea sed duo diam ipsum,Rebum dolore duo et vero ipsum clita, Rebum dolore duo et vero ipsum clita, lorem amet vero eos sed sit...</p>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col-lg-12">
-                          <div class="position-relative mb-3">
-                              <img class="img-fluid w-100" src="static/img/news-500x280-3.jpg" style="object-fit: cover;">
-                              <div class="overlay position-relative bg-light">
-                                  <div class="mb-2" style="font-size: 14px;">
-                                      <a href="">Technology</a>
-                                      <span class="px-1">/</span>
-                                      <span>January 01, 2045</span>
-                                  </div>
-                                  <a class="h4" href="">Est stet amet ipsum stet clita rebum duo</a>
-                                  <p class="m-0">Rebum dolore duo et vero ipsum clita, est ea sed duo diam ipsum, Rebum dolore duo et vero ipsum clita, est ea sed duo diam ipsum, Rebum dolore duo et vero ipsum clita, Rebum dolore duo et vero ipsum clita, clita at justo, lorem amet vero eos sed sit...</p>
-                              </div>
-                          </div>
-                      </div>
+                  <div id="carousel-hehe" class="row owl-carousel owl-carousel-2 owl-loaded owl-drag carousel-item-2 position-relative mb-lg-0">
+                      <div id="car_test1"></div>
+                      <div id="car_test2"></div>
+                      <div id="car_test3"></div>
+                      <div id="car_test4"></div>
+                      <div id="car_test5"></div>
+                      <div id="car_test6"></div>
+                      <div id="car_test7"></div>
+<!--                      <div class="col-lg-12" style="border-radius: 10px;">-->
+<!--                          <div class="position-relative mb-3" style="border-radius: 10px;">-->
+
+<!--                              <img class="img-fluid w-100" src="https://static01.nyt.com/images/2022/11/16/us/politics/16DC-ASSESS/merlin_216678078_15994ef3-a47e-4e5b-b396-d0cc5233fbbb-moth.jpg" style="object-fit: cover;">-->
+<!--                              <div class="overlay position-relative bg-light">-->
+<!--                                  <div class="mb-2" style="font-size: 14px;">-->
+<!--                                      <a href="">Midterm Elections (2022)</a>-->
+<!--                                      <span class="px-1">/</span>-->
+<!--                                      <span>17 November, 2022</span>-->
+<!--                                  </div>-->
+<!--                                  <a class="h4" href="">Republicans Barely Won the House. Now Can They Run It?</a>-->
+<!--                                  <p class="m-0">A thin margin, ideological differences and competing pressures could make managing the “people’s House” virtually impossible. But the G.O.P. majority, however slim, will still be a challenge for President Biden.</p>-->
+<!--                              </div>-->
+<!--                          </div>-->
+<!--                      </div>-->
+<!--                      <div class="col-lg-12" style="border-radius: 10px;">-->
+<!--                          <div class="position-relative mb-3" style="border-radius: 10px;" id="car">-->
+<!--                              <img class="img-fluid w-100" src="https://static01.nyt.com/images/2022/11/16/us/politics/16DC-ASSESS/merlin_216678078_15994ef3-a47e-4e5b-b396-d0cc5233fbbb-moth.jpg" style="object-fit: cover;">-->
+<!--                              <div class="overlay position-relative bg-light">-->
+<!--                                  <div class="mb-2" style="font-size: 14px;">-->
+<!--                                      <a href="">Midterm Elections (2022)</a>-->
+<!--                                      <span class="px-1">/</span>-->
+<!--                                      <span>17 November, 2022</span>-->
+<!--                                  </div>-->
+<!--                                  <a class="h4" href="">Republicans Barely Won the House. Now Can They Run It?</a>-->
+<!--                                  <p class="m-0">A thin margin, ideological differences and competing pressures could make managing the “people’s House” virtually impossible. But the G.O.P. majority, however slim, will still be a challenge for President Biden.</p>-->
+<!--                              </div>-->
+<!--                          </div>-->
+<!--                      </div>-->
+<!--                      <div class="col-lg-12" style="border-radius: 10px;">-->
+<!--                          <div class="position-relative mb-3" style="border-radius: 10px;">-->
+<!--                              <img class="img-fluid w-100" src="static/img/news-500x280-2.jpg" style="object-fit: cover;">-->
+<!--                              <div class="overlay position-relative bg-light">-->
+<!--                                  <div class="mb-2" style="font-size: 14px;">-->
+<!--                                      <a href="">Technology</a>-->
+<!--                                      <span class="px-1">/</span>-->
+<!--                                      <span>January 01, 2045</span>-->
+<!--                                  </div>-->
+<!--                                  <a class="h4" href="">Est stet amet ipsum stet clita rebum duo</a>-->
+<!--                                  <p class="m-0">Rebum dolore duo et vero ipsum clita, est ea sed duo diam ipsum, clita at justo, Rebum dolore duo et vero ipsum clita, est ea sed duo diam ipsum,Rebum dolore duo et vero ipsum clita, Rebum dolore duo et vero ipsum clita, lorem amet vero eos sed sit...</p>-->
+<!--                              </div>-->
+<!--                          </div>-->
+<!--                      </div>-->
+<!--                      <div class="col-lg-12">-->
+<!--                          <div class="position-relative mb-3">-->
+<!--                              <img class="img-fluid w-100" src="static/img/news-500x280-3.jpg" style="object-fit: cover;">-->
+<!--                              <div class="overlay position-relative bg-light">-->
+<!--                                  <div class="mb-2" style="font-size: 14px;">-->
+<!--                                      <a href="">Technology</a>-->
+<!--                                      <span class="px-1">/</span>-->
+<!--                                      <span>January 01, 2045</span>-->
+<!--                                  </div>-->
+<!--                                  <a class="h4" href="">Est stet amet ipsum stet clita rebum duo</a>-->
+<!--                                  <p class="m-0">Rebum dolore duo et vero ipsum clita, est ea sed duo diam ipsum, Rebum dolore duo et vero ipsum clita, est ea sed duo diam ipsum, Rebum dolore duo et vero ipsum clita, Rebum dolore duo et vero ipsum clita, clita at justo, lorem amet vero eos sed sit...</p>-->
+<!--                              </div>-->
+<!--                          </div>-->
+<!--                      </div>-->
                   </div>
               </div>
               <div class="col-lg-4">
