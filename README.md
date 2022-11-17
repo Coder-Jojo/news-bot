@@ -6,7 +6,7 @@ A news application that summarises multiple news articles to give an overall vie
 1. Install necessary packages
 2. Run python app.py
 3. Open http://127.0.0.1:5000/ 
-3. Click on the link to get the datasets and pickled files : 
+3. Click on the link to get the datasets and pickled files : https://drive.google.com/drive/folders/1o40wyaXYmjaWhs96NGBf29TJ_SBCxWGC?usp=sharing
 
 ### Note :
 1. scrapper.py - Scrapes the news articles on given topic
