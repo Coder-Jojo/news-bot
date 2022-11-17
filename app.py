@@ -9,16 +9,16 @@ app = Flask(__name__)
 def home():
     return render_template("InputOutput.html")
 
-# @app.route("/submitJSON2", methods=["POST"])
-# def processJSON2():
-#     jsonStr = request.get_json()
-#     #print(jsonStr)
-#     jsonObj = json.loads(jsonStr)
-#     response = ""
-#     temp1=jsonObj['temp1']
-#     response+="<b> HI<b>"+str(temp1)+"</b><br>"
-#     return response
-#     #return jsonStr
+@app.route("/submitJSON", methods=["POST"])
+def processJSON():
+    jsonObj = request.get_json()
+    #print(jsonStr)
+    print(jsonObj)
+    temp1=jsonObj['search_val']
+    response = ""
+    response +="Text you searched is <b>"+str(temp1)+"</b><br> <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br> Sit amet nisl purus in mollis nunc sed. In vitae turpis massa sed elementum tempus egestas sed sed. Interdum varius sit amet mattis vulputate enim nulla. Porttitor rhoncus dolor purus non enim. Nullam non nisi est sit.<br> Massa vitae tortor condimentum lacinia quis vel eros donec ac. At quis risus sed vulputate. Porttitor rhoncus dolor purus non enim praesent elementum. Ac odio tempor orci dapibus ultrices in iaculis. Nullam vehicula ipsum a arcu. Consectetur adipiscing elit ut aliquam purus.<br> "
+    return response
+    #return jsonStr
 # @app.route("/submitJSON1_", methods=["POST"])
 # def processJSON1_():
 #     jsonObj = request.get_json()
