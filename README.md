@@ -14,4 +14,4 @@ A news application that summarises multiple news articles to give an overall vie
 3. app.py - Flask file
 4. qa_model.py - implements question answer system
 5. seq2seq_attention.py - implements abstractive summarization using seq2seq model with attention layer mechanism
-6. bart&t_5.py - implements abstractive summarization using bart and t-5 model
+6. summarizer.py - implements abstractive summarization using bart and t-5 model
